@@ -48,7 +48,7 @@
   "dependencies": {
     "@eniac/flexcli": "^1.0.7",
     "@eniac/flexdesigner": "^1.0.7",
-    "@napi-rs/canvas": "^0.1.52"
+    "@napi-rs/canvas": "^1.0.3"
   },
   "engines": {
     "node": ">=20"
