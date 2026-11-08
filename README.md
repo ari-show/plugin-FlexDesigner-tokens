@@ -95,11 +95,13 @@ If you don't have Nix, the Determinate Systems installer is the easiest way to g
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
 
-`flake.nix` provides Node.js 20 / git / jq, and confines npm's global prefix inside the repo (`.npm-global`) so `flexcli` doesn't pollute your whole system.
+`flake.nix` provides Node.js 26 / git / jq, and confines npm's global prefix inside the repo (`.npm-global`) so `flexcli` doesn't pollute your whole system.
+
+The project applies a small compatibility patch to FlexCLI 1.0.7 during `npm install` so it works with current Node.js versions. Use the locally installed `flexcli` via the npm scripts.
 
 ### Without Nix
 
-Node.js 20+ is enough: `npm install && npm run dev`.
+Install Node.js 26 or later, then run `npm install && npm run dev`.
 
 ### Main commands
 
@@ -136,8 +138,8 @@ Pushing a tag that matches the `version` in `manifest.json` triggers GitHub Acti
 build a `.flexplugin` for all 3 OSes and attach them to a Release.
 
 ```bash
-git tag v1.0.0
-git push origin v1.0.0
+git tag v1.0.1
+git push origin v1.0.1
 ```
 
 ---

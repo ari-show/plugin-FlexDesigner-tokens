@@ -16,8 +16,7 @@
           name = "flexdesigner-ai-tokens";
 
           packages = with pkgs; [
-            # FlexDesigner SDK requires Node.js 20+
-            nodejs_20
+            nodejs_26
             # flexcli is installed per-project via npm (not packaged in nixpkgs)
             git
             jq
