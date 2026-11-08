@@ -50,7 +50,7 @@ Claude Code と Codex CLI の**残りクォータ**を Flexbar のキー上に�
 | 要件 | 条件 |
 |---|---|
 | FlexDesigner | 2.0.1 以降 |
-| Node.js | 20 以降 |
+| Node.js（ソースからビルドする場合） | 26 以降 |
 | Claude Code | インストール済みで、`claude` でログイン済みであること（Claude キーを使う場合） |
 | Codex CLI | インストール済みで、1回以上セッションを実行済みであること（Codex キーを使う場合） |
 
@@ -95,11 +95,13 @@ Nix が未導入の場合は Determinate Systems インストーラが簡単で�
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
 
-`flake.nix` は Node.js 20 / git / jq を提供し、npm のグローバル prefix をリポジトリ内（`.npm-global`）に閉じ込めるため、`flexcli` がシステム全体を汚しません。
+`flake.nix` は Node.js 26 / git / jq を提供し、npm のグローバル prefix をリポジトリ内（`.npm-global`）に閉じ込めるため、`flexcli` がシステム全体を汚しません。
+
+Node.js の現行バージョンに対応するため、`npm install` 時に FlexCLI 1.0.7 へ互換性パッチを適用します。npm スクリプトからプロジェクト内の `flexcli` を使用してください。
 
 ### Nix を使わない場合
 
-Node.js 20 以降があれば `npm install && npm run dev` で動きます。
+Node.js 26 以降をインストールし、`npm install && npm run dev` を実行してください。
 
 ### 主なコマンド
 
