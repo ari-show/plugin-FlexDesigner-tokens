@@ -23,8 +23,9 @@
   ],
   "type": "commonjs",
   "scripts": {
+    "postinstall": "patch-package",
     "build": "rollup -c",
-    "test": "node --test test/",
+    "test": "node --test",
     "dev": "npm-run-all plugin:unlink plugin:link -p plugin:watch plugin:debug",
     "plugin:watch": "rollup -c -w --watch.onEnd=\"npm run plugin:restart\"",
     "plugin:unlink": "flexcli plugin unlink --uuid com.arishow.aitokens --silent",
@@ -46,11 +47,12 @@
     "rollup-plugin-copy": "^3.5.0"
   },
   "dependencies": {
-    "@eniac/flexcli": "^1.0.7",
+    "@eniac/flexcli": "1.0.7",
     "@eniac/flexdesigner": "^1.0.7",
-    "@napi-rs/canvas": "^0.1.52"
+    "@napi-rs/canvas": "^0.1.52",
+    "patch-package": "8.0.1"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=26"
   }
 }
