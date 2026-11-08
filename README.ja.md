@@ -99,6 +99,8 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 
 Node.js の現行バージョンに対応するため、`npm install` 時に FlexCLI 1.0.7 へ互換性パッチを適用します。npm スクリプトからプロジェクト内の `flexcli` を使用してください。
 
+あわせて、[GHSA-gcqx-w48m-w2h4](https://github.com/advisories/GHSA-gcqx-w48m-w2h4) への暫定対策として `deepmerge` 4.3.1 にパッチを適用します。修正版が公開されるまで、バージョンに基づく脆弱性スキャンでは警告が残る場合があります。
+
 ### Nix を使わない場合
 
 Node.js 26 以降をインストールし、`npm install && npm run dev` を実行してください。
