@@ -50,7 +50,7 @@ This plugin assumes [Claude Code](https://docs.anthropic.com/en/docs/claude-code
 | Requirement | Condition |
 |---|---|
 | FlexDesigner | 2.0.1 or later |
-| Node.js | 20 or later |
+| Node.js (building from source) | 26 or later |
 | Claude Code | Installed and logged in via `claude` (if using the Claude key) |
 | Codex CLI | Installed with at least one session run (if using the Codex key) |
 
