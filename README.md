@@ -99,6 +99,8 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 
 The project applies a small compatibility patch to FlexCLI 1.0.7 during `npm install` so it works with current Node.js versions. Use the locally installed `flexcli` via the npm scripts.
 
+It also applies a temporary patch to `deepmerge` 4.3.1 for [GHSA-gcqx-w48m-w2h4](https://github.com/advisories/GHSA-gcqx-w48m-w2h4). Until a fixed release is available, version-based vulnerability scanners may still report this dependency.
+
 ### Without Nix
 
 Install Node.js 26 or later, then run `npm install && npm run dev`.
