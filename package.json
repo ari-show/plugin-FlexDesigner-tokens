@@ -24,7 +24,7 @@
   "type": "commonjs",
   "scripts": {
     "build": "rollup -c",
-    "test": "node --test test/",
+    "test": "node --test",
     "dev": "npm-run-all plugin:unlink plugin:link -p plugin:watch plugin:debug",
     "plugin:watch": "rollup -c -w --watch.onEnd=\"npm run plugin:restart\"",
     "plugin:unlink": "flexcli plugin unlink --uuid com.arishow.aitokens --silent",
