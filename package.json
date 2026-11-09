@@ -49,7 +49,7 @@
   "dependencies": {
     "@eniac/flexcli": "1.0.7",
     "@eniac/flexdesigner": "^1.0.7",
-    "@napi-rs/canvas": "^1.0.3",
+    "@napi-rs/canvas": "^1.1.0",
     "patch-package": "8.0.1"
   },
   "engines": {
